@@ -1,0 +1,123 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #5f6368;
+    margin-top: 30px;
+    font-size: 2em;
+  }
+  
+  h3 {
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  
+  input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  select, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #cvText {
+    display: none;
+  }
+  
+  /* Translated CV section */
+  #outputContainer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #translatedCV {
+    background-color: #e8e8e8;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+    white-space: pre-wrap;
+  }
+  
+  /* Input fields and buttons in a flex container for better alignment */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    margin-bottom: 10px;
+  }
+  
+  .form-group select, .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 1.8em;
+    }
+  
+    .form-group select, .form-group input[type="file"], button {
+      font-size: 1em;
+      padding: 8px;
+    }
+  }
+  
