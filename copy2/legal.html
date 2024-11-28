@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Services</title>
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <header>
+    <h1>Legal Services</h1>
+    <p>Explore and join various communities in your institution!</p>
+  </header>
+  <div class="community-container" id="communityContainer">
+    <!-- Community Cards will be dynamically loaded here -->
+  </div>
+  <script>
+    const communities = [
+    {
+      name: "Medical Services",
+      description: "Access medical services effortlessly by utilizing the information provided",
+    },
+    {
+      name: "Citizenship",
+      description: "Access essential information and services related to cotizenship and immigration matters",
+    },
+    {
+      name: "Social Security",
+      description: "Find help stting up a social security Account.",
+    },
+    {
+      name: "Driver`s License",
+      description: "Find help with drivers license. This resource provides information on obtaining a drivers license and related services",
+    },
+    {
+      name: "Legal Services",
+      description: "Easily find immigration legal services. This resource simplifies the process of locating legal assisstance for your immgration-related requirements.",
+    },
+  ];
+  
+  const communityContainer = document.getElementById("communityContainer");
+  
+  function loadCommunities() {
+    communities.forEach((community) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <h2>${community.name}</h2>
+        <p>${community.description}</p>
+      `;
+      communityContainer.appendChild(card);
+    });
+  }
+  
+  function joinCommunity(communityName) {
+    alert(`You have joined the ${communityName} community!`);
+  }
+  
+  document.addEventListener("DOMContentLoaded", loadCommunities);
+  
+  </script>
+</body>
+</html>

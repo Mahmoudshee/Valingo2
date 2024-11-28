@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Hub</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+    <h1>Community Hub</h1>
+    <p>Explore and join various communities in your institution!</p>
+  </header>
+  <div class="community-container" id="communityContainer">
+    <!-- Community Cards will be dynamically loaded here -->
+  </div>
+  <script>
+    const communities = [
+    {
+      name: "Mentorship Programs",
+      description: "A place for tech lovers to discuss and share ideas.",
+    },
+    {
+      name: "English Literacy and I.T Skils",
+      description: "Join us to explore creativity through art and design.",
+    },
+    {
+      name: "Consultation and Training Services",
+      description: "For those who love playing or watching sports.",
+    },
+    {
+      name: "Cultural Cafes",
+      description: "Work together to protect and save the environment.",
+    },
+    {
+      name: "Business and innovation",
+      description: "Dive into the world of books and share your insights.",
+    },
+    {
+        name: "Professional Networks",
+        description: "Dive into the world of books and share your insights.",
+      },
+      {
+        name: "International Students",
+        description: "Dive into the world of books and share your insights.",
+      },
+      {
+        name: "Family and health Issues",
+        description: "Dive into the world of books and share your insights.",
+      },
+      {
+        name: "Enterpreneeurship and innovation Hubs",
+        description: "Dive into the world of books and share your insights.",
+      },
+      
+  ];
+  
+  const communityContainer = document.getElementById("communityContainer");
+  
+  function loadCommunities() {
+    communities.forEach((community) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <h2>${community.name}</h2>
+        <p>${community.description}</p>
+        <button onclick="joinCommunity('${community.name}')">Join Community</button>
+      `;
+      communityContainer.appendChild(card);
+    });
+  }
+  
+  function joinCommunity(communityName) {
+    alert(`You have joined the ${communityName} community!`);
+  }
+  
+  document.addEventListener("DOMContentLoaded", loadCommunities);
+  
+  </script>
+</body>
+</html>

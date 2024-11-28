@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Translation</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="cv.css">
+
+  <!-- Include necessary libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>CV Translation</h2>
+
+    <!-- CV Upload Form -->
+    <form id="cvForm">
+      <div class="form-group">
+        <label for="cvFile">Upload CV:</label>
+        <input type="file" id="cvFile" accept=".docx,.txt,.pdf" required>
+      </div>
+
+      <!-- Displaying extracted text from the CV (hidden) -->
+      <textarea id="cvText" rows="10" placeholder="Your CV content will appear here..." readonly></textarea>
+
+      <div class="form-group">
+        <label for="cvLang">Language of the CV:</label>
+        <select id="cvLang" required>
+          <option value="eng">English</option>
+          <option value="spa">Spanish</option>
+          <option value="xho">Xhosa</option>
+          <option value="zul">Zulu</option>
+          <option value="sna">Shona</option>
+          <option value="kin">Kinyarwanda</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="targetLang">Select Target Language:</label>
+        <select id="targetLang" required>
+          <option value="eng">English</option>
+          <option value="spa">Spanish</option>
+          <option value="xho">Xhosa</option>
+          <option value="zul">Zulu</option>
+          <option value="sna">Shona</option>
+          <option value="kin">Kinyarwanda</option>
+        </select>
+      </div>
+
+      <button type="submit">Translate CV</button>
+    </form>
+
+    <!-- Display Translated CV -->
+    <div id="outputContainer">
+      <h3>Translated CV:</h3>
+      <pre id="translatedCV"></pre>
+    </div>
+  </div>
+
+  <script src="cv.js"></script>
+</body>
+</html>
